@@ -1,0 +1,131 @@
+body {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #1dbbe6 0%, #3290ff 100%);
+  min-height: 100vh;
+  color: #fff;
+}
+.wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 28px 0;
+}
+h1 {
+  text-align: center;
+  font-size: 2.8em;
+  font-weight: bold;
+  margin-bottom: 26px;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 16px #3336;
+}
+.card {
+  background: #fff2;
+  border-radius: 22px;
+  padding: 24px 32px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 18px #1489c940;
+  border: 2px solid #fff3;
+  transition: box-shadow 0.15s;
+}
+.card.add {
+  border-style: dashed;
+  margin-bottom: 42px;
+}
+h2 {
+  margin: 0 0 16px 0;
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.form {
+  display: flex;
+  gap: 14px;
+}
+.form input, .head input[type="number"] {
+  border-radius: 10px;
+  border: none;
+  font-size: 1.12em;
+  padding: 8px 12px;
+  outline: none;
+  margin-right: 8px;
+  color: #1a2536;
+  background: #fff;
+  width: 160px;
+}
+.form button, .head .btn-small, .del {
+  border: none;
+  border-radius: 12px;
+  font-size: 1.08em;
+  padding: 8px 26px;
+  background: #ff7194;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.form button:hover, .head .btn-small:hover, .del:hover {
+  background: #fb2c5d;
+}
+.card.goal {
+  margin-bottom: 32px;
+  position: relative;
+}
+.head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+.goal-title {
+  font-size: 1.22em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-right: 4px;
+}
+.bar {
+  width: 100%;
+  background: #ffffff36;
+  height: 16px;
+  border-radius: 9px;
+  overflow: hidden;
+}
+.fill {
+  background: linear-gradient(90deg, #ff7fae 0%, #ffe5ec 100%);
+  height: 100%;
+  border-radius: 9px;
+  transition: width 0.4s;
+}
+.percent {
+  font-size: 1.06em;
+  margin-left: 1px;
+  margin-right: 7px;
+}
+.del {
+  padding: 8px 16px;
+  border-radius: 50%;
+  background: #ff527c;
+  font-size: 1.3em;
+  margin-left: auto;
+  transition: background 0.16s;
+}
+.del:hover {
+  background: #c92549;
+}
+.btn-small {
+  background: #fff3;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.15em;
+  cursor: pointer;
+  padding: 2px 10px;
+  margin-left: 3px;
+  transition: background 0.2s;
+}
+.btn-small:hover {
+  background: #fff7;
+}
+@media (max-width: 700px) {
+  .wrapper { padding: 12px 0; }
+  .card { padding: 14px 8px; }
+  .form { flex-direction: column; gap: 9px; }
+}
+
