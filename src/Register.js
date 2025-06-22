@@ -14,7 +14,7 @@ export default function Register({ onRegister }) {
     });
 
     if (res.ok) {
-      onRegister();
+      onRegister("login");
     } else {
       setError("Registrierung fehlgeschlagen");
     }
@@ -22,6 +22,7 @@ export default function Register({ onRegister }) {
 
   return (
     <div className="wrapper">
+      <img src="/logo192.png" alt="Logo" style={{ width: 120, marginBottom: 24 }} />
       <h1>Registrieren</h1>
       <form onSubmit={register} className="form">
         <input
