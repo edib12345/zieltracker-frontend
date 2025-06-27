@@ -4,7 +4,7 @@ import Login from "./Login";
 import Register from "./Register";
 import { getToken, clearToken } from "./auth";
 
-const API = "http://192.168.50.131:8000";
+const API = "http://192.168.50.133:8000";
 
 export default function App() {
   const [goals, setGoals] = useState([]);

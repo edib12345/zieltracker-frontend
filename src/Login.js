@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { saveToken } from "./auth";
 
-const API = "http://192.168.50.131:8000";
+const API = "http://192.168.50.133:8000";
 
 export default function Login({ onLogin }) {
   const [username, setUsername] = useState("");

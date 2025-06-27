@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+const API = "http://192.168.50.133:8000";
+
 export default function Register({ onRegister }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -7,14 +9,14 @@ export default function Register({ onRegister }) {
 
   const register = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://192.168.50.131:8000/register", {
+    const res = await fetch(`${API}/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
     });
 
     if (res.ok) {
-      onRegister("login");
+      onRegister();
     } else {
       setError("Registrierung fehlgeschlagen");
     }
@@ -22,7 +24,6 @@ export default function Register({ onRegister }) {
 
   return (
     <div className="wrapper">
-      <img src="/logo192.png" alt="Logo" style={{ width: 120, marginBottom: 24 }} />
       <h1>Registrieren</h1>
       <form onSubmit={register} className="form">
         <input
